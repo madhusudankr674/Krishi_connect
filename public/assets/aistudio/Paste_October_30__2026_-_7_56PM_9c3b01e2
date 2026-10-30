@@ -1,0 +1,1581 @@
+# PROJECT: KRISHI CONNECT — A REAL-TIME AGRICULTURAL MARKETPLACE
+
+## 1. YOUR ROLE
+
+Act as a senior full-stack developer, UI/UX designer, database architect, and software engineer.
+
+Build a complete, modern, responsive, full-stack web application called **Krishi Connect — Connecting Farmers to Better Market Opportunities**.
+
+This must be a functional application, not just a static frontend, UI mockup, or prototype with fake buttons.
+
+The application must allow multiple users to register, log in from different devices, list agricultural products, discover nearby buyers and sellers, place bids, accept offers, confirm orders, and track product availability in real time.
+
+Build, test, and deploy the application using suitable technologies and provide a public URL that my team members can open from their own laptops and mobile phones.
+
+Do not stop after generating the frontend. Implement the backend, database, authentication, real-time updates, image storage, and deployment configuration.
+
+---
+
+# 2. PROJECT OBJECTIVE
+
+Farmers often struggle to find reliable market prices, suitable buyers, transportation options, and profitable selling opportunities.
+
+Krishi Connect aims to solve these problems by connecting farmers directly with buyers through a transparent digital marketplace.
+
+The platform should help farmers:
+- List crops and agricultural produce.
+- Set their own prices and quantities.
+- Upload product photographs.
+- Discover potential buyers.
+- Receive and compare competing bids.
+- Accept the best suitable offer.
+- Manage orders and sold inventory.
+- Discover relevant market price information.
+- Find buyers and sellers based on location.
+- Communicate with buyers.
+- Make informed selling decisions.
+
+Buyers should be able to:
+- Browse available agricultural products.
+- Search and filter products.
+- View prices, quantities, photographs, and seller locations.
+- Place purchase requests.
+- Submit competing price bids.
+- Track bid status.
+- Receive notifications when sellers respond.
+- View order confirmations.
+- Contact sellers regarding produce and delivery.
+
+The platform must support real-time collaboration among multiple registered users.
+
+---
+
+# 3. REQUIRED TECHNOLOGY STACK
+
+Use a modern, production-oriented technology stack.
+
+Preferred technologies:
+
+Frontend:
+- React.js with TypeScript.
+- Vite or an equivalent modern frontend build tool.
+- Tailwind CSS.
+- shadcn/ui or a similarly polished component library.
+- Lucide icons.
+- Reusable, well-structured components.
+
+Backend:
+- Supabase for backend services.
+- Supabase Authentication for registration and login.
+- PostgreSQL for persistent application data.
+- Supabase Realtime for live database updates.
+- Supabase Storage for product photographs and profile images.
+- Row Level Security (RLS) for access control.
+
+Additional tools:
+- React Router for navigation.
+- React Hook Form and Zod for forms and validation.
+- Leaflet with OpenStreetMap for maps, if suitable.
+- A charting library such as Recharts for market statistics.
+
+Use compatible, stable package versions.
+
+If Supabase credentials are unavailable, create the complete integration structure and provide clear setup instructions. Never pretend that real authentication, database persistence, or real-time functionality is working when the required services have not been configured.
+
+Do not replace the backend with localStorage or hardcoded arrays as the final solution.
+
+Local mock data may be used only for development previews. The final deployed application must use persistent shared backend data.
+
+---
+
+# 4. DESIGN AND BRAND IDENTITY
+
+Create a premium agricultural marketplace experience.
+
+Application name:
+KRISHI CONNECT
+
+Tagline:
+"From Farm to Market. Better Prices. Stronger Connections."
+
+Visual direction:
+- Modern agricultural technology startup.
+- Clean, trustworthy, professional design.
+- Nature-inspired greens.
+- Warm cream backgrounds.
+- White cards.
+- Dark green headings.
+- Subtle orange accents for calls to action.
+- Rounded cards and buttons.
+- Soft shadows.
+- Excellent typography.
+- High-quality agricultural product photography.
+- Smooth but restrained transitions.
+- Responsive layouts.
+- Accessible contrast and readable text.
+
+Suggested color palette:
+- Primary green: #166534
+- Dark green: #14532D
+- Accent green: #22C55E
+- Warm cream: #F8FAF3
+- White: #FFFFFF
+- Accent orange: #F59E0B
+- Main text: #17231B
+- Muted text: #647067
+
+Use Inter, Manrope, or another suitable modern font.
+
+Avoid a generic-looking admin dashboard. The design should resemble a combination of a premium agricultural marketplace, a modern e-commerce website, and a farm management platform.
+
+Use real agricultural product photographs from legitimate image sources or uploaded files. Do not rely on emoji as product images.
+
+Create attractive empty states, loading skeletons, toast notifications, confirmation dialogs, and meaningful error messages.
+
+Ensure that all pages look polished on desktop, tablet, and mobile devices.
+
+---
+
+# 5. PUBLIC LANDING PAGE
+
+Create an impressive landing page for visitors who are not logged in.
+
+The landing page must include:
+
+A. Navigation bar
+- Krishi Connect logo.
+- Home.
+- Marketplace.
+- How It Works.
+- Market Insights.
+- About Us.
+- Login.
+- Register.
+- A prominent "Start Selling" button.
+
+B. Hero section
+
+Headline:
+"Sell Smarter. Earn Better. Grow Together."
+
+Supporting text:
+"Connect directly with buyers, discover competitive crop prices, and find better opportunities for your agricultural produce."
+
+Primary CTA:
+"Explore Marketplace"
+
+Secondary CTA:
+"Start Selling"
+
+Use a high-quality agricultural photograph featuring fresh produce or farmers working in a field.
+
+Include a visually appealing search bar that lets visitors explore crops and agricultural products.
+
+C. Marketplace highlights
+
+Display attractive cards for:
+- Fresh Vegetables.
+- Fruits.
+- Grains and Cereals.
+- Pulses.
+- Spices.
+- Other Agricultural Produce.
+
+D. How It Works
+
+Show a three-step process:
+
+1. Farmers list their produce.
+2. Buyers discover products and submit offers.
+3. Farmers choose an offer and confirm the transaction.
+
+E. Featured marketplace listings
+
+Display product photographs, crop names, asking prices, quantities, seller locations, and availability.
+
+Use actual database listings when available. If the database is empty, show clearly identified sample listings or a useful empty state.
+
+Never confuse sample data with actual offers.
+
+F. Market insights
+
+Show a sample dashboard preview featuring:
+- Crop price comparisons.
+- Recent market price changes.
+- Popular crops.
+- Regional demand indicators.
+
+Clearly distinguish illustrative statistics from verified live market information.
+
+G. Trust and benefits section
+
+Highlight:
+- Direct farmer-to-buyer connections.
+- Competitive offers.
+- Transparent pricing.
+- Location-based discovery.
+- Real-time notifications.
+
+H. Footer
+
+Include:
+- About.
+- Contact.
+- Help Center.
+- Privacy Policy.
+- Terms and Conditions.
+- Seller Guidelines.
+- Buyer Guidelines.
+
+---
+
+# 6. AUTHENTICATION AND USER REGISTRATION
+
+Implement a real email-and-password authentication system.
+
+Create the following pages:
+
+1. Login.
+2. Registration.
+3. Forgot Password.
+4. Reset Password.
+5. Email Verification or Confirmation.
+6. User Profile Setup.
+
+Registration fields:
+- Full name.
+- Email address.
+- Password.
+- Confirm password.
+- Phone number, optional.
+- State.
+- District.
+- Village or town.
+- Account role: Seller, Buyer, or Both.
+- Terms and conditions acceptance.
+
+Authentication requirements:
+- Users must register with an email and password.
+- Email addresses must be unique.
+- Use secure password hashing through the authentication provider.
+- Never store plaintext passwords.
+- Enforce reasonable password requirements.
+- Include password visibility controls.
+- Include proper form validation.
+- Include useful error messages.
+- Implement password reset.
+- Implement email verification where supported.
+- Keep authenticated sessions across page refreshes.
+- Provide a logout function.
+- Protect private routes.
+- Prevent unauthenticated users from accessing restricted dashboards.
+
+A user should be able to choose a seller account, buyer account, or both roles.
+
+If a user selects both roles, provide a role switcher in the dashboard.
+
+IMPORTANT:
+Do not use a manually created login form that accepts arbitrary credentials without authenticating against the backend.
+
+Create a polished split-screen authentication design with agricultural imagery and a clean registration form.
+
+---
+
+# 7. USER ROLES AND PERMISSIONS
+
+Implement role-based authorization on both the frontend and backend.
+
+There are three account configurations:
+
+A. Seller
+B. Buyer
+C. Buyer and Seller
+
+SELLER PERMISSIONS:
+
+Sellers can:
+- Create product listings.
+- Edit their own product names.
+- Change their own asking prices.
+- Update product photographs.
+- Update quantities.
+- Edit descriptions.
+- Change listing status.
+- Set minimum acceptable bid prices if desired.
+- View incoming bids.
+- Compare buyers' offers.
+- Accept or reject offers.
+- Confirm orders.
+- Mark eligible orders as fulfilled.
+- View their sales history.
+- Manage their own location and profile.
+- Receive notifications.
+- Communicate with buyers.
+
+Sellers must NOT be able to modify another seller's listings.
+
+BUYER PERMISSIONS:
+
+Buyers can:
+- Browse all available products.
+- Search and filter listings.
+- View seller information.
+- View seller locations at the permitted level of precision.
+- Submit bids.
+- Place purchase requests.
+- Cancel eligible pending requests.
+- View their own bids and orders.
+- Receive notifications.
+- Contact sellers.
+- Review completed transactions.
+
+Buyers must NOT be able to change a seller's product name, price, quantity, photographs, or ownership.
+
+Buyers may submit offers, but only the seller or an authorized backend process may accept a bid and commit the transaction.
+
+ADMINISTRATION:
+
+If an administrator role is implemented, it must be protected and must not be assignable by ordinary public registration.
+
+Administrators may manage reported content, categories, disputes, and platform settings according to explicitly defined permissions.
+
+Enforce these permissions through Supabase Row Level Security policies and secure backend operations, not just hidden frontend buttons.
+
+---
+
+# 8. PRODUCT LISTING SYSTEM
+
+Create a complete agricultural product listing feature.
+
+Each product must support:
+
+- Unique product ID.
+- Seller ID.
+- Product name.
+- Crop category.
+- Product description.
+- Product photographs.
+- Asking price.
+- Price unit.
+- Available quantity.
+- Quantity unit.
+- Minimum order quantity.
+- Crop variety.
+- Quality or grade.
+- Harvest date, optional.
+- Expected availability date.
+- Location.
+- Created date.
+- Last updated date.
+- Listing status.
+- Delivery or pickup options.
+- Organic certification claim, optional and clearly unverified unless evidence is supplied.
+
+Price units should include:
+- Per kilogram.
+- Per quintal.
+- Per tonne.
+- Per piece.
+- Per crate.
+- Other configurable units.
+
+Quantity units should include:
+- Kilograms.
+- Quintals.
+- Tonnes.
+- Pieces.
+- Crates.
+- Bags.
+
+Product listing form:
+
+1. Upload one or more photographs.
+2. Enter crop name.
+3. Select a category.
+4. Enter description.
+5. Set asking price.
+6. Select price unit.
+7. Enter available quantity.
+8. Select quantity unit.
+9. Enter minimum order quantity.
+10. Add location.
+11. Select delivery or pickup.
+12. Set the listing's availability.
+13. Preview the listing.
+14. Publish it.
+
+Allow sellers to edit, pause, reactivate, or close their own listings.
+
+Use real image uploads to persistent storage. Save image URLs and metadata in the database.
+
+Validate uploaded image types and file sizes.
+
+Display products in attractive cards containing:
+- Product photograph.
+- Product name.
+- Category.
+- Price and unit.
+- Available quantity.
+- Seller name.
+- Seller location.
+- Quality or grade when provided.
+- Number of bids, when appropriate.
+- Availability badge.
+- View Details button.
+- Place Bid or Send Inquiry button.
+
+Add pagination or efficient loading when the number of listings grows.
+
+---
+
+# 9. REAL-TIME MARKETPLACE
+
+This is one of the most important requirements.
+
+Implement a genuinely shared marketplace using the database and real-time subscriptions.
+
+Example scenario:
+
+1. Seller A registers on their laptop.
+2. Seller B registers on another laptop.
+3. Buyer A registers on a third laptop.
+4. Buyer B registers on a fourth laptop.
+5. All four users open the same deployed website URL.
+6. Seller A publishes a listing for tomatoes at ₹25 per kilogram.
+7. Seller B publishes a listing for onions at ₹30 per kilogram.
+8. Both buyers can see these listings without refreshing the page.
+9. Buyer A opens the tomato listing and offers ₹28 per kilogram.
+10. Buyer B submits an offer of ₹30 per kilogram.
+11. Seller A receives a real-time notification about both bids.
+12. Seller A compares the offers.
+13. Seller A accepts Buyer B's offer.
+14. Buyer B immediately receives an offer-accepted notification.
+15. The accepted order appears in both users' dashboards.
+16. The accepted quantity is reserved or deducted according to the order workflow.
+17. Other buyers cannot purchase the same reserved quantity.
+18. The listing shows its updated availability.
+19. When all available inventory is sold, the listing displays SOLD OUT.
+20. Seller A and Buyer B can view the completed transaction in their order histories.
+
+Implement the same workflow for all registered users.
+
+Use Supabase Realtime or an equivalent persistent real-time backend for:
+- New product listings.
+- Product edits.
+- Price updates.
+- Quantity changes.
+- New bids.
+- Accepted and rejected bids.
+- Order creation.
+- Order status updates.
+- Notifications.
+- Listing availability changes.
+
+Real-time changes must be reflected on connected devices without requiring a manual browser refresh.
+
+Use appropriate database subscriptions and unsubscribe when components are unmounted.
+
+Handle connection interruptions gracefully and refetch authoritative data when a connection is restored.
+
+Do not simulate real-time behavior with timers, hardcoded updates, or browser-local state.
+
+---
+
+# 10. LIVE BIDDING SYSTEM
+
+Create a proper bidding system.
+
+Each listing should have a dedicated product details page with a bidding panel.
+
+Buyers can:
+- Enter their proposed price.
+- Specify the quantity they want.
+- Add an optional message.
+- Submit their bid.
+- View their bid history.
+- See whether their bid is pending, accepted, rejected, withdrawn, or expired.
+
+Validate:
+- The offered price is greater than zero.
+- The requested quantity is valid.
+- The requested quantity does not exceed the quantity available for that transaction.
+- The buyer cannot bid on their own listing.
+- Buyers cannot change another user's bid.
+- Sellers cannot submit bids on their own products.
+- Duplicate submissions should be handled safely.
+
+Sellers should see a bidding dashboard with:
+
+- Product name.
+- Buyer name.
+- Buyer location.
+- Offered price.
+- Requested quantity.
+- Total offer value.
+- Bid submission time.
+- Bid status.
+- Accept button.
+- Reject button.
+- View Buyer Profile button.
+
+Sort bids by:
+- Highest offered price.
+- Most recent.
+- Requested quantity.
+- Total offer value.
+
+Show a visual badge for the highest current offer, but do not automatically accept it.
+
+IMPORTANT:
+The seller must retain final decision-making authority.
+
+The seller should be able to choose a lower offer if factors such as transportation, quantity, delivery time, or buyer reliability make it more suitable.
+
+When a bid is accepted:
+- Validate the current listing state on the server.
+- Verify that the requested quantity is available.
+- Create or update the relevant order.
+- Reserve the quantity.
+- Reject or invalidate conflicting bids where appropriate.
+- Notify the seller and buyer.
+- Update the listing and all connected dashboards.
+
+Perform these operations atomically using a PostgreSQL transaction or a secure database function/RPC.
+
+Prevent race conditions where two buyers attempt to acquire the same remaining quantity simultaneously.
+
+Do not accept a bid based solely on a frontend action.
+
+---
+
+# 11. ORDER MANAGEMENT AND SOLD STATUS
+
+Implement a complete order workflow.
+
+Suggested order statuses:
+
+- Pending Seller Confirmation.
+- Accepted.
+- Awaiting Payment, if payments are enabled.
+- Confirmed.
+- Preparing.
+- Ready for Pickup.
+- In Transit.
+- Delivered.
+- Completed.
+- Cancelled.
+- Disputed.
+
+Clearly distinguish an accepted bid from a completed sale.
+
+A seller accepting a bid should create an order or order reservation. It should not automatically mean that the physical goods have been delivered.
+
+Order details should include:
+- Order ID.
+- Buyer information.
+- Seller information.
+- Product.
+- Agreed price.
+- Quantity.
+- Total amount.
+- Delivery or pickup method.
+- Order creation time.
+- Expected fulfillment date.
+- Current status.
+- Relevant status history.
+
+Calculate the total amount using the agreed price and requested quantity, with unit conversions handled correctly.
+
+Inventory requirements:
+
+If a seller has 100 kg of tomatoes and accepts an order for 40 kg:
+- Reserve 40 kg.
+- Keep the remaining 60 kg available if the workflow allows additional sales.
+- Prevent other orders from reserving unavailable inventory.
+- Release reserved stock if an order is cancelled under the applicable cancellation rules.
+
+If all available stock is sold or reserved, clearly display the corresponding state.
+
+Use distinct statuses:
+- AVAILABLE.
+- PARTIALLY RESERVED.
+- RESERVED.
+- SOLD OUT.
+- PAUSED.
+- EXPIRED.
+
+Never silently delete sold products or their order history.
+
+Allow sellers to mark an order as fulfilled only when permitted by the workflow.
+
+Provide a seller sales history and a buyer purchase history.
+
+---
+
+# 12. BUYER AND SELLER DASHBOARDS
+
+Create different dashboards according to user role.
+
+SELLER DASHBOARD:
+
+Include:
+- Welcome message.
+- Profile summary.
+- Active listings.
+- Total available inventory.
+- Pending bids.
+- Highest received offer.
+- Active orders.
+- Completed sales.
+- Recent activity.
+- Sales trends.
+- Quick action to add a product.
+
+Provide a sidebar with:
+- Overview.
+- My Products.
+- Add New Product.
+- Incoming Bids.
+- Orders.
+- Sales History.
+- Market Prices.
+- Nearby Buyers.
+- Messages.
+- Notifications.
+- Profile Settings.
+
+BUYER DASHBOARD:
+
+Include:
+- Welcome message.
+- Search marketplace.
+- Recommended crops.
+- Nearby sellers.
+- Active bids.
+- Accepted offers.
+- Pending orders.
+- Completed purchases.
+- Saved products.
+- Recent notifications.
+
+Provide a sidebar with:
+- Overview.
+- Browse Marketplace.
+- My Bids.
+- My Orders.
+- Saved Products.
+- Nearby Sellers.
+- Messages.
+- Notifications.
+- Profile Settings.
+
+BOTH ROLES:
+
+Provide a role switcher if the user is registered as both a seller and a buyer.
+
+Display information from the actual authenticated user's database records.
+
+Do not use static dashboard numbers that pretend to represent real transactions.
+
+---
+
+# 13. SELLER AND BUYER LOCATIONS
+
+Location discovery is an important feature.
+
+Create a marketplace map using Leaflet and OpenStreetMap or another suitable mapping solution.
+
+Display map markers for:
+- Sellers.
+- Buyers who have opted into discoverability.
+- Available produce listings.
+- Relevant nearby marketplaces, if verified data is available.
+
+Location features:
+- Search by village, town, district, or state.
+- Filter products by distance.
+- View nearby sellers.
+- View nearby buyers.
+- Display approximate travel distance when calculable.
+- Show the listing's location.
+- Provide a list view alongside the map.
+- Open a seller's public profile from a marker.
+- Show available products for each seller.
+
+Location privacy:
+- Ask for permission before using device geolocation.
+- Let users manually enter their location.
+- Allow users to control location visibility.
+- Never expose a user's private home address publicly by default.
+- Use approximate map coordinates or public pickup locations unless the user explicitly chooses otherwise.
+- Do not track users continuously in the background.
+
+If a user denies location access, the application must continue to work using their manually entered location.
+
+Use real coordinates only when they have been provided or obtained through a valid geocoding service.
+
+Do not invent exact coordinates for sellers.
+
+---
+
+# 14. MARKET PRICE AND DEMAND INSIGHTS
+
+Create a Market Insights page.
+
+Include:
+- Crop price comparison.
+- Price trends over time.
+- Regional crop prices.
+- Demand indicators.
+- Popular products.
+- Recent price movements.
+- Suggested market comparisons.
+- Historical price charts.
+
+Allow users to select:
+- Crop.
+- State.
+- District.
+- Market.
+- Date range.
+- Price unit.
+
+Data integrity is critical.
+
+Use a reliable external agricultural market data source when one is available and configured.
+
+For India, investigate whether the official AGMARKNET or e-NAM data services offer suitable access for the intended use.
+
+If external market data cannot be obtained, show actual prices from platform listings and label them clearly as current asking prices from participating users.
+
+For illustrative development charts, label the data as DEMO DATA.
+
+Never invent live agricultural prices, verified demand statistics, or official market quotations.
+
+Display the source, location, unit, and last-updated timestamp for externally sourced price information.
+
+Do not claim that a crop price will increase or guarantee a particular profit.
+
+Optional feature:
+Provide an indicative price comparison that helps farmers compare their asking price with recent available market information.
+
+---
+
+# 15. REGIONAL LANGUAGE SUPPORT
+
+Design the platform for farmers across India.
+
+Implement a language selector in the header and user settings.
+
+Initial supported languages:
+- English.
+- Hindi.
+- Kannada.
+- Telugu.
+- Tamil.
+
+Use a proper internationalization library such as i18next.
+
+Translate navigation labels, forms, buttons, validation messages, and common interface text.
+
+Keep crop names and user-generated descriptions in their original language unless translation is requested.
+
+Store the user's preferred interface language in their profile.
+
+If a complete translation is not yet available, clearly identify untranslated sections and provide a fallback language.
+
+Avoid displaying broken translation keys.
+
+Design text components so that longer regional-language strings do not break the layout.
+
+---
+
+# 16. REAL-TIME NOTIFICATIONS
+
+Implement an in-app notification center.
+
+Notify users about:
+- New bids on their products.
+- Bid acceptance.
+- Bid rejection.
+- New orders.
+- Order confirmation.
+- Order cancellation.
+- Inventory changes.
+- New messages.
+- Delivery or fulfillment updates.
+- Relevant listing changes.
+
+Features:
+- Notification bell.
+- Unread notification count.
+- Mark as read.
+- Mark all as read.
+- Notification history.
+- Click-through navigation to the relevant product, bid, or order.
+
+Use the backend to store notifications persistently.
+
+Use real-time subscriptions to deliver in-app updates to connected devices.
+
+Optional: Add email notifications through a properly configured email provider.
+
+Do not display success notifications for operations that the backend has rejected.
+
+---
+
+# 17. MESSAGING BETWEEN BUYERS AND SELLERS
+
+Create a simple private messaging system.
+
+Features:
+- Buyer-to-seller conversations.
+- Messages associated with a product or order when appropriate.
+- Conversation list.
+- Sender and recipient identification.
+- Message timestamps.
+- Unread message indicators.
+- Real-time message updates.
+- Basic text message support.
+
+Security:
+- Only conversation participants can read messages.
+- Only authorized participants can send messages.
+- Validate message length.
+- Apply reasonable rate limits where possible.
+
+Do not expose private conversations publicly.
+
+---
+
+# 18. PRODUCT SEARCH AND FILTERS
+
+Implement a responsive marketplace browsing page.
+
+Search by:
+- Crop name.
+- Category.
+- Seller name.
+- District.
+- State.
+- Product description.
+
+Filters:
+- Price range.
+- Quantity available.
+- Crop category.
+- Distance.
+- Quality grade.
+- Organic claim.
+- Delivery or pickup.
+- Newly listed.
+- Highest current bid.
+- Available now.
+
+Sorting:
+- Price: low to high.
+- Price: high to low.
+- Newest listings.
+- Highest offer.
+- Nearest sellers.
+- Most relevant.
+
+Include:
+- Search suggestions where appropriate.
+- Clear filters button.
+- Pagination or efficient incremental loading.
+- No-results state.
+- Loading skeletons.
+- Responsive product grids.
+
+Search must query the shared backend rather than only searching local sample data.
+
+---
+
+# 19. ADDITIONAL FEATURES THAT MAKE IT A REAL PRODUCT
+
+Implement the following features where feasible.
+
+A. Saved Products and Watchlist
+
+Allow buyers to save interesting products and return to them later.
+
+B. Price Alerts
+
+Allow users to configure notifications when a listing reaches a specified asking price or when a relevant product becomes available.
+
+Clearly distinguish user-defined alerts from guaranteed market-price monitoring.
+
+C. Seller Profiles
+
+Each seller profile can include:
+- Name.
+- Profile photograph.
+- Village, district, and state.
+- Short introduction.
+- Listed products.
+- Completed transaction count.
+- Account verification status.
+- Optional buyer reviews.
+
+Do not fabricate seller reviews, completed transactions, or verification badges.
+
+D. Reviews and Ratings
+
+After an eligible transaction is completed, allow the buyer to review the seller and the seller to review the buyer.
+
+Restrict reviews to verified transactions.
+
+Prevent duplicate reviews for the same transaction and review direction.
+
+E. Transportation Assistance
+
+Allow sellers to specify pickup, delivery, or transportation assistance.
+
+Provide an optional transport request form with:
+- Pickup location.
+- Destination.
+- Produce quantity.
+- Required date.
+- Approximate load.
+- Contact preference.
+
+If no logistics provider is integrated, treat this as a request-management feature, not a live transportation booking service.
+
+F. Negotiation History
+
+Keep a history of offers, counteroffers, acceptances, and rejections.
+
+G. Expiring Listings
+
+Allow sellers to set an expiry date.
+
+Automatically mark expired listings as unavailable through a reliable scheduled backend process.
+
+H. Seller Analytics
+
+Show:
+- Listing views where tracked.
+- Number of bids.
+- Average offered price.
+- Sales completed.
+- Inventory remaining.
+
+Calculate these metrics from actual stored events and transactions.
+
+I. Reports and Export
+
+Allow sellers to download their own order history or sales summary as CSV.
+
+J. Help and Dispute Reporting
+
+Allow users to report suspicious listings, inappropriate content, or order disputes.
+
+K. Responsive Mobile Experience
+
+Optimize the platform for mobile phones commonly used by farmers and buyers.
+
+L. Accessibility
+
+Support keyboard navigation, accessible form labels, meaningful image alternative text, visible focus indicators, and sufficient color contrast.
+
+Prioritize the core marketplace, bidding, and order workflow before implementing optional enhancements.
+
+---
+
+# 20. DATABASE DESIGN
+
+Design a normalized PostgreSQL database with appropriate relationships, indexes, constraints, and timestamps.
+
+Create the following tables or equivalent structures.
+
+1. profiles
+
+Fields:
+- id, referencing the authenticated user.
+- full_name.
+- email or a securely managed reference to the authentication identity.
+- phone.
+- account_roles.
+- preferred_language.
+- state.
+- district.
+- village_or_town.
+- approximate_latitude.
+- approximate_longitude.
+- location_visibility.
+- profile_image_url.
+- created_at.
+- updated_at.
+
+Use the authentication provider's user identity as the source of truth. Do not expose private authentication data.
+
+2. categories
+
+Fields:
+- id.
+- name.
+- description.
+- image_url.
+- active.
+
+3. products
+
+Fields:
+- id.
+- seller_id.
+- category_id.
+- name.
+- description.
+- image_urls.
+- variety.
+- quality_grade.
+- asking_price.
+- price_unit.
+- available_quantity.
+- reserved_quantity.
+- quantity_unit.
+- minimum_order_quantity.
+- location description.
+- optional coordinates.
+- delivery_options.
+- harvest_date.
+- available_from.
+- expires_at.
+- status.
+- created_at.
+- updated_at.
+
+4. bids
+
+Fields:
+- id.
+- product_id.
+- buyer_id.
+- offered_price.
+- price_unit.
+- requested_quantity.
+- quantity_unit.
+- message.
+- status.
+- created_at.
+- updated_at.
+
+5. orders
+
+Fields:
+- id.
+- product_id.
+- seller_id.
+- buyer_id.
+- accepted_bid_id, where applicable.
+- agreed_unit_price.
+- price_unit.
+- quantity.
+- quantity_unit.
+- total_amount.
+- delivery_method.
+- delivery_address or agreed pickup details, appropriately protected.
+- order_status.
+- created_at.
+- updated_at.
+
+6. order_status_history
+
+Fields:
+- id.
+- order_id.
+- changed_by.
+- previous_status.
+- new_status.
+- note.
+- created_at.
+
+7. notifications
+
+Fields:
+- id.
+- user_id.
+- type.
+- title.
+- message.
+- related_entity_type.
+- related_entity_id.
+- is_read.
+- created_at.
+
+8. conversations
+
+Fields:
+- id.
+- related_product_id, optional.
+- related_order_id, optional.
+- created_at.
+- updated_at.
+
+9. conversation_participants
+
+Fields:
+- conversation_id.
+- user_id.
+
+10. messages
+
+Fields:
+- id.
+- conversation_id.
+- sender_id.
+- body.
+- created_at.
+- read_at, optional.
+
+11. saved_products
+
+Fields:
+- user_id.
+- product_id.
+- created_at.
+
+12. reviews
+
+Fields:
+- id.
+- order_id.
+- reviewer_id.
+- reviewed_user_id.
+- rating.
+- comment.
+- created_at.
+
+13. reports
+
+Fields:
+- id.
+- reporter_id.
+- target_type.
+- target_id.
+- reason.
+- description.
+- status.
+- created_at.
+
+14. price_history
+
+Fields:
+- id.
+- product_id or external market reference.
+- crop_name.
+- market_name.
+- district.
+- state.
+- price.
+- price_unit.
+- data_source.
+- observed_at.
+
+Create additional tables if required for counteroffers, price alerts, delivery requests, audit logs, or market data imports.
+
+Add:
+- Foreign keys.
+- Appropriate indexes.
+- Unique constraints.
+- CHECK constraints.
+- Consistent timestamps.
+- Database migrations.
+- Seed scripts for clearly labeled development data.
+
+Use appropriate decimal types for money and numeric types for quantities.
+
+Use integer minor currency units or a suitable decimal representation for financial amounts. Never use floating-point arithmetic for authoritative monetary calculations.
+
+Define explicit policies for deletion and historical data retention.
+
+---
+
+# 21. SECURITY AND DATA INTEGRITY
+
+Security is mandatory.
+
+Implement:
+
+- Supabase Row Level Security for every exposed user-data table.
+- Secure authorization for seller-only listing changes.
+- Secure authorization for buyer-only bidding actions.
+- Private conversation access.
+- Private notification access.
+- Restricted order access.
+- Validation for all user inputs.
+- Secure product image uploads.
+- Safe database operations.
+- Appropriate database constraints.
+- Protection against unauthorized role changes.
+- Protection against users modifying their own privileged roles.
+- Safe handling of public profiles and locations.
+- Server-side authorization for sensitive operations.
+- Protection against double orders and over-selling.
+- Safe error handling without leaking secrets.
+- Environment variables for configuration.
+- A secure `.gitignore`.
+- No hardcoded API secrets.
+- No service-role keys in browser code.
+
+Use the public Supabase publishable key where appropriate and enforce security through correctly configured policies.
+
+Privileged keys must remain server-side.
+
+Create and test policies for each role and operation.
+
+Never rely on frontend role checks alone.
+
+For critical operations such as accepting bids, reserving inventory, and creating orders, implement secure transactional database functions or equivalent backend operations.
+
+Ensure that concurrent requests cannot sell the same inventory twice.
+
+---
+
+# 22. UI PAGES AND ROUTING
+
+Implement these routes or equivalent pages.
+
+PUBLIC:
+- /
+- /marketplace
+- /marketplace/:productId
+- /how-it-works
+- /market-insights
+- /about
+- /help
+- /login
+- /register
+- /forgot-password
+
+AUTHENTICATED:
+- /dashboard
+- /seller
+- /buyer
+- /products/new
+- /products/:productId/edit
+- /my-products
+- /my-bids
+- /my-orders
+- /sales-history
+- /nearby
+- /messages
+- /notifications
+- /saved-products
+- /profile
+- /settings
+
+Implement role-aware redirects and protected routes.
+
+Ensure that refreshing a nested route works on the deployed hosting platform.
+
+Create a consistent layout with a responsive sidebar for dashboard pages and a marketplace navigation bar for public browsing.
+
+---
+
+# 23. REALISTIC TEST DATA
+
+Create a development seed dataset containing products such as:
+
+- Tomatoes.
+- Onions.
+- Potatoes.
+- Rice.
+- Wheat.
+- Maize.
+- Groundnuts.
+- Bananas.
+- Mangoes.
+- Green chillies.
+
+Use plausible sample values for prices, quantities, and locations.
+
+For example:
+
+Product: Fresh Tomatoes
+Asking price: ₹25/kg
+Available quantity: 500 kg
+Seller location: Mysuru, Karnataka
+
+Product: Red Onions
+Asking price: ₹30/kg
+Available quantity: 800 kg
+Seller location: Bengaluru Rural, Karnataka
+
+Product: Fresh Bananas
+Asking price: ₹40/kg
+Available quantity: 300 kg
+Seller location: Mandya, Karnataka
+
+These are illustrative example listings, not verified current market prices or actual offers.
+
+Use attractive product photographs.
+
+Display a visible "Sample Listing" or "Demo Data" label wherever seeded records could otherwise be mistaken for real users' listings.
+
+Do not create fake verified sellers, fake completed transactions, or fake live bids.
+
+Allow the developer to create multiple real test accounts and test the application with independent sessions.
+
+---
+
+# 24. DEPLOYMENT AND PUBLIC ACCESS
+
+The website must be accessible through a public URL so that multiple team members can use it simultaneously.
+
+Recommended deployment:
+- Frontend: Vercel or another suitable public hosting service.
+- Backend: Supabase.
+- Database: Supabase PostgreSQL.
+- Authentication: Supabase Auth.
+- Image storage: Supabase Storage.
+- Real-time updates: Supabase Realtime.
+
+Deployment requirements:
+
+1. Configure the application for production builds.
+2. Provide an `.env.example` file.
+3. Document the required environment variables.
+4. Configure the Supabase project.
+5. Apply all database migrations.
+6. Configure Row Level Security policies.
+7. Configure storage buckets and access policies.
+8. Configure email authentication and password reset.
+9. Configure frontend hosting.
+10. Configure SPA route fallback behavior.
+11. Configure permitted redirect URLs.
+12. Configure production environment variables.
+13. Test the deployed application.
+14. Verify that multiple devices can access shared data.
+15. Verify that real-time updates work across devices.
+16. Verify that uploaded images load for authorized viewers.
+17. Verify that private data remains private.
+
+The final deliverables must include:
+- Public deployment URL, once deployment succeeds.
+- Source code.
+- Database schema and migrations.
+- Authentication setup instructions.
+- Environment variable documentation.
+- Storage configuration instructions.
+- Test account setup instructions.
+- README with installation and deployment steps.
+
+IMPORTANT:
+
+Do not claim that the site is publicly hosted if it is only running on localhost.
+
+Do not present a preview URL as a permanent production URL.
+
+If deployment requires my credentials, create the deployment-ready project, identify the exact configuration needed, and guide me through connecting the services.
+
+Never ask me to paste secret credentials into public source files.
+
+---
+
+# 25. TESTING REQUIREMENTS
+
+Before considering the project complete, test all core workflows.
+
+TEST 1: Registration
+- Create a seller account.
+- Create a buyer account.
+- Verify that both users can log in independently.
+
+TEST 2: Product Listing
+- Seller creates a tomato listing.
+- Product persists in the database.
+- Product appears in the marketplace.
+
+TEST 3: Cross-Device Visibility
+- Open the deployed site in another browser or on another device.
+- Log in as a buyer.
+- Verify that the tomato listing appears without manually entering it again.
+
+TEST 4: Live Bidding
+- Buyer submits an offer.
+- Seller receives the bid in real time.
+- Buyer sees the correct bid status.
+
+TEST 5: Competing Offers
+- Two different buyers submit bids.
+- Seller can compare both offers.
+- Seller can accept the preferred offer.
+
+TEST 6: Order Creation
+- Seller accepts a bid.
+- Exactly one valid order is created.
+- Both buyer and seller see the same order.
+
+TEST 7: Inventory
+- Reserve part of a product's quantity.
+- Verify that remaining available inventory is correct.
+- Attempt an order exceeding available stock.
+- Confirm that the backend rejects it.
+
+TEST 8: Sold Status
+- Complete the sale of all available inventory.
+- Confirm that the product becomes SOLD OUT.
+- Verify that it cannot be purchased again.
+- Verify that its order history remains available.
+
+TEST 9: Permissions
+- Attempt to edit another seller's listing as a buyer.
+- Confirm that the backend denies the operation.
+- Attempt to read another user's private notifications.
+- Confirm that the backend denies the operation.
+
+TEST 10: Image Upload
+- Upload a product image.
+- Refresh the page.
+- Confirm that the image remains available.
+
+TEST 11: Messaging
+- Send a message from buyer to seller.
+- Confirm that only authorized conversation participants can access it.
+
+TEST 12: Location
+- Add a seller's location.
+- Verify that the listing appears in the location view when discoverability is enabled.
+
+TEST 13: Responsive Design
+- Test desktop, tablet, and mobile layouts.
+
+TEST 14: Production Build
+- Run the production build.
+- Fix compilation errors.
+- Fix broken routes.
+- Fix missing environment configuration.
+- Fix runtime errors and major console warnings.
+
+Do not mark any test as passed unless it has actually been executed successfully.
+
+---
+
+# 26. IMPLEMENTATION WORKFLOW
+
+Follow this development sequence:
+
+PHASE 1: Project Setup
+- Initialize the project.
+- Configure TypeScript and Tailwind.
+- Create the design system.
+- Set up routing.
+- Build the shared layouts.
+
+PHASE 2: Backend
+- Configure Supabase.
+- Create database migrations.
+- Create tables, constraints, and indexes.
+- Configure Row Level Security.
+- Configure storage.
+
+PHASE 3: Authentication
+- Implement registration.
+- Implement login.
+- Implement password reset.
+- Implement user profiles and roles.
+- Implement protected routes.
+
+PHASE 4: Marketplace
+- Implement product listing creation.
+- Implement image uploads.
+- Implement product editing.
+- Implement browsing, search, and filters.
+- Connect all features to the database.
+
+PHASE 5: Bidding and Orders
+- Implement bid creation.
+- Implement bid comparison.
+- Implement secure bid acceptance.
+- Implement transactional inventory reservations.
+- Implement order tracking.
+- Implement sold-out handling.
+
+PHASE 6: Real-Time Features
+- Implement database subscriptions.
+- Implement real-time notifications.
+- Implement shared marketplace updates.
+- Implement private messaging.
+
+PHASE 7: Additional Features
+- Implement location discovery.
+- Implement market insights.
+- Implement language selection.
+- Implement saved products and reviews where feasible.
+
+PHASE 8: Testing and Deployment
+- Run all feasible tests.
+- Fix errors.
+- Configure production deployment.
+- Verify the public application.
+- Document setup and remaining external dependencies.
+
+At the end of each phase, ensure the application still builds and previously working features continue to function.
+
+Do not create placeholder buttons for required functionality.
+
+---
+
+# 27. FINAL ACCEPTANCE CRITERIA
+
+The project is successful only when:
+
+1. The application has a professional, attractive UI.
+2. Users can register and log in using unique email addresses and passwords.
+3. Sellers can create and edit their own product listings.
+4. Buyers can browse products created by other users.
+5. Product photographs upload to persistent storage.
+6. Multiple users can access the same deployed application.
+7. New listings appear for connected users in real time.
+8. Buyers can submit competing bids.
+9. Sellers can compare and select offers.
+10. Accepted offers generate valid orders.
+11. Inventory is updated safely.
+12. Sold-out products cannot be purchased again.
+13. Buyers and sellers receive appropriate notifications.
+14. Seller and buyer locations can be displayed with suitable privacy controls.
+15. Data persists after refresh, logout, and login.
+16. Unauthorized operations are blocked by the backend.
+17. The application works on desktop and mobile.
+18. The application is deployed to a public URL, or any remaining deployment requirements are explicitly documented.
+19. The README explains how to configure, run, test, and deploy the application.
+20. The application does not misrepresent demo data as live market information.
+
+---
+
+# 28. FINAL INSTRUCTIONS TO ANTIGRAVITY
+
+Start by inspecting the available project environment and selecting an appropriate implementation approach.
+
+Then build the application step by step.
+
+Make reasonable technical decisions without repeatedly asking for approval for routine implementation details.
+
+Prioritize a complete, working core marketplace over superficial animations or excessive decorative features.
+
+Use reusable components and maintainable code.
+
+Do not leave core buttons nonfunctional.
+
+Do not replace database operations with temporary local state.
+
+Do not hardcode credentials.
+
+Do not claim successful deployment without verifying it.
+
+If a service requires user credentials or manual account configuration, explain the exact steps needed.
+
+If any requested external integration is unavailable, implement a clearly documented fallback without fabricating data.
+
+At the end, provide:
+- A summary of completed features.
+- The project structure.
+- Database and security setup details.
+- Tests executed and their actual results.
+- The public website URL, if successfully deployed.
+- Any remaining configuration steps.
+- Clear instructions for testing the application with two sellers and two buyers on different laptops.
+
+**The most important requirement is this: build a genuinely shared, real-time agricultural marketplace in which multiple independently authenticated users can interact through one public website, with secure permissions, live bidding, reliable order creation, and accurate inventory management.**
